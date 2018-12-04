@@ -1,0 +1,370 @@
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Rounded Mplus 1c","游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, sans-serif;
+	background-image: url(../images/shadow.png);
+	background-repeat: repeat-y;
+	background-position: center top;
+	background-color: #F9F9F9;
+	color: #535353;
+}
+li {
+	list-style-type: none;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: auto;
+}
+
+.youchienkyouyu_kyuzin_wrapper{
+	width: 100%;
+	padding: 0 0;
+	background-color: #EEEEEE;
+}
+.youchienkyouyu_kyuzin_header {
+	width: 100% !important;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 90px;
+}
+.youchienkyouyu_kyuzin_logo {
+	padding: 0px;
+	float: left;
+	margin: 0px;
+	height: auto;
+	width: auto;
+}
+
+.youchienkyouyu_kyuzin_logo img{
+	width: 100%;
+}
+
+h1 {
+	font-size: 12px;
+	text-align: right;
+	display: block;
+	text-decoration: none;
+	padding: 0px;
+	height: auto;
+	width: 100%;
+	float: right;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: #000;
+}
+
+h2{
+	font-size: 20px;
+    color: #595959;
+    line-height: 1.5;
+    padding: 0 0 10px;
+    border-bottom: 5px #feb396 solid;
+    margin: 0 0 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.youchienkyouyu_kyuzin_mainimg {
+	padding: 0px;
+	height: 100vh;
+	width: 100vw;
+	margin-top: 0px;
+	margin-right: 0;
+	margin-bottom: 30px;
+	margin-left: 0;
+	background-image: url(../images/top.jpg);
+	background-position:center center;
+	background-size: cover;
+	z-index: -1;
+	top:0;
+	position: fixed;
+}
+
+.youchienkyouyu_kyuzin_mainimg h1{
+	position: absolute;
+	z-index: 99999999;
+	top:30%;
+	left: 20%;
+	font-size: 60px;
+	color:rgba(255,255,255,0.5);
+}
+
+.youchienkyouyu_kyuzin_container {
+	height: auto;
+	width: 90%;
+	margin-top: 650px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	padding: 50px 5%;
+	background-color: #FFF;
+
+}
+.youchienkyouyu_kyuzin_rightside {
+	float: right;
+	width: 65%;
+	height: auto;
+	margin: 0px;
+	padding: 2.5%;
+}
+.youchienkyouyu_kyuzin_leftside {
+	width: 25%;
+	padding: 2.5%;
+	height: auto;
+	float: left;
+	margin: 0px;
+}
+/*
+h2 {
+	height: auto;
+	width: 100%;
+	font-size: 20px;
+	line-height: 50px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	display: block;
+	text-decoration: none;
+	margin-top: 0px;
+	color: #FFF;
+	background-color: #385176;
+	text-align: center;
+}*/
+.youchienkyouyu_kyuzin_rightside p {
+	font-size: 14px;
+	text-decoration: none;
+	width: auto;
+	display: block;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: auto;
+	line-height: 25px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 100px;
+	padding-left: 0px;
+	word-break: break-all;
+}
+.youchienkyouyu_kyuzin_thumb01 {
+	border-radius: 5px;
+	margin: 0px;
+	height: auto;
+	width: 100%;
+	float: right;
+}
+
+.youchienkyouyu_kyuzin_thumb01 img{
+	border-radius: 5px;
+
+}
+
+.youchienkyouyu_kyuzin_thumb02 {
+	margin: 0px;
+	height: auto;
+	width: 100%;
+	float: left;
+	padding-top: 0px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 0px;
+}
+h3 {
+	color: #aed4d5;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    margin:25px 0;
+}
+/*.sub {
+	width: auto;
+	text-align: left;
+	height: 40px;
+	margin-top: 0px;
+	margin-right: auto;
+	display: block;
+	margin-left: auto;
+	text-indent: 30px;
+	padding: 0px;
+	line-height: 40px;
+	font-size: 12px;
+	background-image: url(../images/arrow_side.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	font-weight: normal;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+	text-decoration: none;
+	margin-bottom: 0px;
+}*/
+
+.youchienkyouyu_kyuzin_sub{
+	 border: 1px #fd475d solid;
+    border-radius: 5px;
+    background: #fff;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: 0 0 10px;
+
+}
+
+
+.youchienkyouyu_kyuzin_sub a {
+	color: #000;
+	text-decoration: none;
+}
+.youchienkyouyu_kyuzin_leftside a {
+	color: #000000;
+	text-decoration: none;
+}
+.youchienkyouyu_kyuzin_leftside a:hover {
+	color: #999999;
+	text-decoration: underline;
+}
+
+.youchienkyouyu_kyuzin_footer {
+	height: 30px;
+	width: 100%;
+	margin:0; 
+	background-color: #feb396;
+	text-align: center;
+	font-size: 12px;
+	text-decoration: none;
+	padding: 0;
+	color: #FFF;
+	line-height: 2.5;
+}
+
+.youchienkyouyu_kyuzin_outer-healine {
+	height: auto;
+	width: 100%;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-color: #FFF;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	border-top-width: 5px;
+	border-top-style: solid;
+	border-top-color: #385176;
+}
+.youchienkyouyu_kyuzin_clear {
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+	height: auto;
+	width: auto;
+}
+
+table,td,tr {
+	border: 1px solid #999999;
+	border-collapse:collapse;
+}
+.youchienkyouyu_kyuzin_leftside p {
+	padding: 5px;
+	height: auto;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+	word-break: break-all;
+}
+.youchienkyouyu_kyuzin_leftside p img {
+	float: right;
+	height: auto;
+	width: auto;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	}
+.youchienkyouyu_kyuzin_div_links {
+	font-size: 13px;
+	padding: 0px;
+	height: auto;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	display: block;
+	line-height: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #999;
+}
+.youchienkyouyu_kyuzin_div_links a {
+	text-decoration: none;
+}
+.youchienkyouyu_kyuzin_div_links a:hover {
+	text-decoration: underline;
+}
+
+.youchienkyouyu_kyuzin_gazou{
+	background-image: url(../images/thumb2.png);
+	border-radius: 5px;
+	background-size: cover;
+	height: 150px;
+}
+
+h4{
+	font-size: 18px;
+    font-weight: bold;
+    color: #feb396;
+    margin: 20px 0;
+    position: relative;
+    padding: 0 0 0 20px;
+}
+
+
+.youchienkyouyu_kyuzin_tsuiki{
+	background-color: rgba(254, 179, 150, 0.15);
+	padding:20px 10px;
+	border-radius: 25px;
+
+}
+
+@media screen and (max-width:480px) {
+.youchienkyouyu_kyuzin_leftside{
+	width: 100%;
+}
+
+.youchienkyouyu_kyuzin_mainimg{
+	height: 50vh;
+}
+
+.youchienkyouyu_kyuzin_container{
+	margin-top: 320px;
+}
+
+
+.youchienkyouyu_kyuzin_rightside{
+	width: 100%;
+}
+
+h2{
+	font-size: 15px;
+}
+
+
+}
+
+

@@ -1,0 +1,298 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	color: #535353;
+}
+
+.hoikushi_tokyo_header a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color:#363636;
+   text-decoration:underline;
+}
+.hoikushi_tokyo_header a::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.hoikushi_tokyo_header a:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hoikushi_tokyo_wrapper{
+	width: 100%;
+}
+
+
+.hoikushi_tokyo_header {
+	width: 80%;
+	height: 40px;
+	padding: 10px 10%;
+	display: flex;
+	z-index: 111;
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.8);
+
+
+}
+
+.hoikushi_tokyo_header h1{
+	width: 60%;
+	text-align: left;
+	letter-spacing: 0.1em;
+	font-weight: normal;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
+	font-size: 23px;
+}
+
+
+.hoikushi_tokyo_header ul {
+	width: 40%;
+	list-style: none;
+	text-align: right;
+
+}
+
+.hoikushi_tokyo_header ul li{
+	padding:5px;
+	display: inline-block;
+}
+
+.hoikushi_tokyo_header ul li a{
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.hoikushi_tokyo_mainimg{
+	width: 100vw;
+	height: 100vw;
+	background-image: url(../images/imdextopimg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.hoikushi_tokyo_container{
+	width: 90%;
+	margin: 0 5%;
+}
+
+.hoikushi_tokyo_blog{
+	background-color: #DDDDDD;
+    padding: 5%;
+    margin: 50px 0;
+    width: 90%;
+    position: relative;
+}
+
+
+.hoikushi_tokyo_blog-container{
+	margin: 30px 0;
+	display: flex;
+	padding: 20px;
+	background-color: rgba(255,255,255,0.6);
+}
+
+.hoikushi_tokyo_blog-container-img{
+	width: 30%;
+}
+
+.hoikushi_tokyo_blog-container-img img{
+	width: 18vw;
+    height: 18vw;
+    border-radius: 50%;
+}
+
+.hoikushi_tokyo_blog-container p{
+	line-height: 25px;
+	font-family:'Open Sans',sans-serif !important;
+	font-size: 14px;
+	
+}
+
+.hoikushi_tokyo_blog-container-unity{
+	width: 70%;
+	margin-left: 5%;
+
+}
+
+.hoikushi_tokyo_blog-container-unity a{
+	text-decoration: none;
+}
+
+.hoikushi_tokyo_blog-container-unity h3{
+	margin-bottom:20px;
+	letter-spacing: 0.1em;
+	font-size: 20px;
+	line-height: 1.5;
+	font-weight: normal;
+	border-left: 15px solid #E7A646;
+	    text-indent: 13px;
+}
+
+/*カテゴリ*/
+.hoikushi_tokyo_blog-container-unity_cate{
+	width: 70%;
+	margin-left: 5%;
+
+}
+
+.hoikushi_tokyo_blog-container-unity_cate a{
+	text-decoration: none;
+}
+
+.hoikushi_tokyo_blog-container-unity_cate h3{
+	margin-bottom:20px;
+	letter-spacing: 0.1em;
+	font-size: 20px;
+	line-height: 1.5;
+	font-weight: normal;
+	border-left: 15px solid #E7A646;
+	    text-indent: 13px;
+}
+
+
+/*リンク*/
+
+
+.hoikushi_tokyo_blog-container-unity_link{
+	width: 70%;
+	margin-left: 5%;
+
+}
+
+.hoikushi_tokyo_blog-container-unity_link a{
+	text-decoration: none;
+}
+
+.hoikushi_tokyo_blog-container-unity_link h3{
+	margin-bottom:20px;
+	letter-spacing: 0.1em;
+	font-size: 20px;
+	line-height: 1.5;
+	font-weight: normal;
+	border-left: 15px solid #E7A646;
+	    text-indent: 13px;
+}
+
+
+
+
+
+.hoikushi_tokyo_blog h2{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 25px;
+    letter-spacing: 0.3em;
+    font-weight: normal;
+    color: #FFF;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
+    border-bottom: 4px double #FFF;
+
+}
+
+.hoikushi_tokyo_footer {
+	width: 100%;
+	color: #FFF;
+    background-color:#DDDDDD;
+    text-align: center;
+    font-size: 12px;
+    line-height: 4;
+}
+
+.hoikushi_tokyo_blog-container-unity p::after{
+	content: '・・・続きを読む';
+}
+
+.hoikushi_tokyo_blog-container-unity_cate p::after{
+	content: '・・・このカテゴリーの記事を読む';
+}
+
+
+
+@media screen and (max-width:480px) {
+
+	.hoikushi_tokyo_header h1{
+		width: 100%;
+		text-align: center;
+		font-size: 15px;
+	}
+
+	.hoikushi_tokyo_header ul{
+		display: none;
+	}
+
+	.hoikushi_tokyo_header ul li a{
+		display: none;
+	}
+
+
+	.hoikushi_tokyo_container{
+		width: 100%;
+		margin:0;
+	}
+
+	.hoikushi_tokyo_blog{
+		margin:0;
+
+	}
+
+	.hoikushi_tokyo_blog-container{
+		width: 90%;
+		display: block;
+		margin-bottom: 50px;
+		padding:30px 5%;
+
+
+	}
+
+	.hoikushi_tokyo_blog-container-img{
+		width: 100%;
+	}
+
+
+    .hoikushi_tokyo_blog-container-img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 0;
+    }
+
+	.hoikushi_tokyo_blog-container-unity{
+		margin:20px 0;
+		width: 100%;
+		font-size: 14px;
+	}
+
+	.hoikushi_tokyo_blog-container-unity h3{
+		font-size: 17px;
+	}
+
+	.hoikushi_tokyo_footer {
+	width: 100%;
+    background-color:#FFF;
+    text-align: center;
+    font-size: 12px;
+    line-height: 4;
+    color: #535353;
+}
+
+
+
+}
+
+
+

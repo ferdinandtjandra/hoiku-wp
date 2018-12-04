@@ -1,0 +1,142 @@
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Rounded Mplus 1c","游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, sans-serif;
+	color: #535353;
+	background-color: #FFF;
+
+}
+
+
+.youchienkyouyu_kyuzin_header{
+	width: 90%;
+	position: fixed;
+	background-color: #f9cc88;
+	color: #FFF;
+	padding: 10px 5%;
+	border-bottom: 5px #f9cc88 solid;
+
+
+}
+
+.youchienkyouyu_kyuzin_mainimg{
+	background-image: url(../images/top.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: 100vh;
+	padding-top: 100px;
+
+}
+
+.youchienkyouyu_kyuzin_container{
+	width: 90%;
+	margin: 0 5%;
+	border-radius: 10%;
+}
+
+.youchienkyouyu_kyuzin_blog{
+	background: rgba(254, 179, 150, 0.15);
+    padding: 5%;
+    margin: 50px 0;
+    width: 90%;
+
+}
+
+.youchienkyouyu_kyuzin_blog-flex{
+	display: flex;
+	width: 100%;
+
+}
+
+.youchienkyouyu_kyuzin_blog-container{
+	width: 23%;
+	padding-right: 3%;
+	margin: 30px 0;
+	}
+
+.youchienkyouyu_kyuzin_blog-container-img{
+	width: 100%;
+}
+.youchienkyouyu_kyuzin_blog-container-img img{
+	width: 100%;
+	border-radius: 10px;
+
+}
+
+
+h1{
+	text-align: center;
+    letter-spacing: 3px;
+    font-size: 25px;
+    width: 100%;
+    font-family: "Rounded Mplus 1c","游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, sans-serif;
+	font-weight: normal;
+}
+
+h2{
+	font-size: 20px;
+    font-weight: bold;
+    width: 93%;
+    margin: 10px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ff8773;
+    width: 100%;
+}
+
+h3{
+	font-size: 20px;
+    font-weight: bold;
+    width: 93%;
+    margin: 10px 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ff8773;
+    width: 100%;
+}
+
+p{
+	font-size: 15px;
+}
+
+.youchienkyouyu_kyuzin_footer{
+	width: 100%;
+	background-color:#f9cc88;
+	color: #FFF;
+	line-height: 2.5;
+	text-align: center;
+
+}
+
+@media screen and (max-width:480px) {
+
+.youchienkyouyu_kyuzin_header{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.youchienkyouyu_kyuzin_header a{
+	margin-bottom: 5px;
+	font-size: 13px;
+	margin-right: 5px;
+}
+.youchienkyouyu_kyuzin_blog-flex{
+	display: block;
+	width: 100%;
+
+}
+
+.youchienkyouyu_kyuzin_blog-container{
+	width: 100%;
+}
+
+p{
+	margin-bottom: 70px;
+}
+
+
+}

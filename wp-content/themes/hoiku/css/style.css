@@ -1,0 +1,350 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	width: 100%;
+	font-family:'Open Sans',sans-serif;
+	margin: 0px;
+	padding: 0px;
+	color: #595959;
+}
+
+.hoikushi_tokyo_header a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color:#363636;
+   text-decoration:underline;
+}
+.hoikushi_tokyo_header a::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #333;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+}
+.hoikushi_tokyo_header a:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hoikushi_tokyo_wrapper{
+	width: 100%;
+}
+
+
+.hoikushi_tokyo_header {
+	width: 80%;
+	height: 40px;
+	padding: 10px 10%;
+	display: flex;
+	z-index: 111;
+	position: fixed;
+	background-color: rgba(255, 255, 255, 0.8);
+
+
+}
+
+.hoikushi_tokyo_header h1{
+	width: 60%;
+	text-align: left;
+	
+	letter-spacing: 0.1em;
+	font-weight: normal;
+	font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
+	font-size: 23px;
+	}
+
+
+.hoikushi_tokyo_header ul {
+	width: 40%;
+	list-style: none;
+	text-align: right;
+
+}
+
+.hoikushi_tokyo_header ul li{
+	padding:5px;
+	display: inline-block;
+}
+
+.hoikushi_tokyo_header ul li a{
+	text-decoration: none;
+	font-size: 14px;
+}
+
+
+.hoikushi_tokyo_container {
+	width: 100%;
+	height: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 60px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.hoikushi_tokyo_article {
+	width: 100%;
+}
+
+.hoikushi_tokyo_article_title{
+	width: 100%;
+	position: relative;
+
+}
+
+.hoikushi_tokyo_article_title h2{
+	font-family:  Futura, "Trebuchet MS", Arial, sans-serif !important;
+	font-size: 23px;
+	font-size: 30px;
+	color: rgba(255, 255, 255, 0.8);
+	position: absolute;
+	top: 50%;
+	left:10%;
+	letter-spacing: 0.2em;
+	text-shadow: 5px 5px 5px #AAAAAA;
+}
+
+.hoikushi_tokyo_article_img{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/top.jpg);
+	background-size: cover;
+	background-repeat:repeat;
+	background-position: center;
+}
+.hoikushi_tokyo_article_img2{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/top2.png);
+	background-size: cover;
+	background-repeat:repeat;
+	background-position: center;
+}
+
+.hoikushi_tokyo_article_img_sp{
+	background-image: none;
+}
+
+.hoikushi_tokyo_article_img2_sp{
+	background-image: none;
+}
+
+.hoikushi_tokyo_article p {
+	width: 70%;
+	padding:0 15%;
+	font-size: 14px;
+	line-height: 25px;
+	margin-bottom: 100px;
+}
+
+.hoikushi_tokyo_article h3 {
+	text-align: center;
+	font-size: 18px;
+	margin:30px 0;
+	letter-spacing: 0.1em;
+}
+
+.hoikushi_tokyo_article p a{
+	text-decoration: none;
+	color:#363636;
+    text-decoration:underline;
+
+}
+
+.hoikushi_tokyo_article_picter{
+	width: 100%;
+}
+
+.hoikushi_tokyo_article_picter img{
+	width: 70%;
+	padding: 10px 15%;
+}
+
+.hoikushi_tokyo_category h2{
+	width: 100%;
+	text-align: center;
+	padding:10px 0;
+	font-size: 25px;
+	letter-spacing: 0.3em;
+	font-weight: normal;
+	color: #FFF;
+	font-family:Futura, "Trebuchet MS", Arial, sans-serif !important;
+	border-bottom: 4px double #FFF;
+}
+
+.hoikushi_tokyo_category h3{
+	text-align: center;
+	padding:10px 0;
+	letter-spacing: 0.1em;
+
+
+}
+
+.hoikushi_tokyo_category{
+	width: 70%;
+	padding:30px 15%;
+	background-color: #DDDDDD;
+
+}
+
+.hoikushi_tokyo_category_aria{
+	width: 32%;
+	padding:25px 0;
+	
+}
+
+.hoikushi_tokyo_category_aria a{
+	text-decoration: none;
+	color:#363636;
+    text-decoration:underline;
+
+}
+
+.hoikushi_tokyo_category_aria p{
+	width: 100%;
+	padding:10px;
+	line-height: 25px;
+	font-size: 14px;
+}
+
+.hoikushi_tokyo_category_wrap{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.hoikushi_tokyo_category_wrap li{
+	list-style: none;
+
+}
+
+.hoikushi_tokyo_category_img{
+	width: 100%;
+}
+.hoikushi_tokyo_category_img img{
+	width: 100%;
+}
+
+.hoikushi_tokyo_footer {
+	background-color: #FFF;
+    text-align: center;
+    font-size: 12px;
+	line-height: 4;}
+
+.hoikushi_tokyo_postscript{
+	padding:20px 10px;
+	font-family:'Open Sans',sans-serif;
+	background-color: #EEEEEE;
+	margin:30px 15%;
+	position: relative;
+	display: inline-block;
+	min-width: 120px;
+ 	max-width: 100%;
+ 	font-size: 14px;
+ 	    line-height: 25px;
+}
+
+.hoikushi_tokyo_postscript:before{
+	content: "";
+	position: absolute;
+	top: -30px;
+	left: 5%;
+	border: 15px solid transparent;
+	border-bottom: 15px solid #EEEEEE;
+}
+
+table,td,tr {
+	border: 1px solid #999999;
+	border-collapse:collapse;
+}
+
+
+@media screen and (max-width:480px) {
+
+	.hoikushi_tokyo_header{
+		width: 100%;
+		padding:10px 0;
+	}
+
+
+	.hoikushi_tokyo_header h1{
+		width: 100%;
+		text-align: center;
+		font-size: 15px;
+	}
+
+	.hoikushi_tokyo_header ul{
+		display: none;
+	}
+	.hoikushi_tokyo_header ul li a{
+		display: none;
+	}
+
+	.hoikushi_tokyo_article h3{
+		widows: 85%;
+		padding: 0 7.5%;
+	}
+
+	.hoikushi_tokyo_article p{
+		width: 85%;
+		padding:0 7.5%;
+	}
+
+	.hoikushi_tokyo_category_aria{
+		width: 100%;
+	}
+
+	.hoikushi_tokyo_article p{
+		margin-bottom: 50px;
+		font-size: 14px;
+	}
+	
+	.hoikushi_tokyo_article_img{
+		height: 0;
+	}
+
+	.hoikushi_tokyo_article_img_sp{
+	width: 100%;
+	height: 300px;
+	background-image: url(../images/top.jpg);
+	background-size: cover;
+	background-repeat:repeat;
+	background-position: center;}
+
+	.hoikushi_tokyo_article_img{
+	background-image: none;
+}
+
+	.hoikushi_tokyo_article_img2{
+		height: 0;
+	}
+
+	.hoikushi_tokyo_article_img2_sp{
+	width: 100%;
+	height: 300px;
+	background-image: url(../images/top2.png);
+	background-size: cover;
+	background-repeat:repeat;
+	background-position: center;}
+
+	.hoikushi_tokyo_article_img2{
+	background-image: none;
+}
+
+    .hoikushi_tokyo_article_picture{
+    	margin:10px 0;
+    }
+
+    .hoikushi_tokyo_article_title h2{
+    	font-size: 23px;
+    	top:30%;
+    }
+ }

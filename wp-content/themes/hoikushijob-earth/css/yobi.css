@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+body {
+	font-family: "メイリオ", Meiryo, Osaka, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	margin: 0px;
+	padding: 0px;
+	background-color: #F2F2F2;
+	border-top-width: 5px;
+	border-top-style: solid;
+	border-top-color: #EC445C;
+}
+li {
+	list-style-type: none;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: auto;
+}
+#body-page {
+	height: 80px;
+	width: 800px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding: 0px;
+}
+.logo {
+	margin: 0px;
+	padding: 0px;
+	float: left;
+	height: auto;
+	width: auto;
+}
+h1 {
+	font-size: 13px;
+	color: #000;
+	text-decoration: none;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	height: 50px;
+	width: 500px;
+	text-align: right;
+	float: right;
+	line-height: 50px;
+}
+#layouts-all {
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: auto;
+}
+#button {
+	padding: 0px;
+	float: right;
+	height: auto;
+	width: auto;
+	display: block;
+	line-height: 20px;
+	font-size: 11px;
+	text-align: left;
+	background-image: url(../images/arrow_head.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-indent: 15px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+}
+#button a {
+	font-size: 11px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	height: auto;
+	width: auto;
+	margin: 0px;
+	padding: 0px;
+}
+#button a:hover {
+	font-size: 11px;
+	font-weight: bold;
+	color: #999;
+	text-decoration: none;
+}
+#clear {
+	margin: 0px;
+	padding: 0px;
+	clear: both;
+	height: auto;
+	width: auto;
+}
+#mainimg {
+	height: 290px;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 30px;
+	margin-left: auto;
+	background-image: url(../images/mainbg.png);
+	background-repeat: repeat-x;
+	background-position: left center;
+	background-color: #EC445C;
+	padding-top: 30px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+.mainimg {
+	padding: 0px;
+	height: 250px;
+	width: 800px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	display: block;
+	margin-top: 0px;
+}
+#container {
+	height: auto;
+	width: 800px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 0px;
+	padding-bottom: 100px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#right {
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	width: 500px;
+	float: right;
+}
+h2 {
+	font-size: 16px;
+	line-height: 40px;
+	font-weight: bold;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	display: block;
+	padding: 0px;
+	height: 40px;
+	width: 500px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	background-position: left center;
+	text-indent: 25px;
+}
+#right p {
+	font-size: 14px;
+	line-height: 25px;
+	font-weight: normal;
+	color: #000;
+	text-decoration: none;
+	text-align: left;
+	display: block;
+	height: auto;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 20px;
+	padding-left: 0px;
+	word-break: break-all;
+}
+.pic1 {
+	margin: 0px;
+	float: right;
+	height: auto;
+	width: auto;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 7px;
+	padding-left: 7px;
+}
+.pic2 {
+	margin: 0px;
+	float: left;
+	height: auto;
+	width: auto;
+	padding-top: 0px;
+	padding-right: 7px;
+	padding-bottom: 7px;
+	padding-left: 0px;
+}
+#left {
+	margin: 0px;
+	float: left;
+	height: auto;
+	width: 230px;
+	padding: 0px;
+}
+h3 {
+	padding: 0px;
+	height: 35px;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	font-size: 15px;
+	line-height: 35px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	background-color: #EC445C;
+}
+#sidebar {
+	height: 40px;
+	width: auto;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #aaaaaa;
+	font-size: 13px;
+	line-height: 40px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	display: block;
+	background-image: url(../images/arrow_side.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	text-align: left;
+	text-indent: 25px;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#sidebar a {
+	color: #000;
+	text-decoration: none;
+}
+#left a {
+	color: #000;
+	text-decoration: none;
+}
+#left a:hover {
+	color: #999;
+	text-decoration: underline;
+}
+#footnavi {
+	font-size: 12px;
+	font-style: normal;
+	line-height: 150px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
+	padding: 0px;
+	height: 150px;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(../images/fooer_bg.png);
+	background-repeat: repeat-x;
+	background-position: left center;
+	text-align: center;
+	display: block;
+	background-color: #EC445C;
+}
+#footnavi a {
+	font-size: 12px;
+	line-height: 150px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: underline;
+}
+table,td,tr {
+	border: 1px solid #999999;
+	border-collapse:collapse;
+}
+#left p {
+	padding: 5px;
+	height: auto;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #ccc;
+	word-break: break-all;
+}
+.color {
+	font-size: 18px;
+	font-weight: bold;
+	color: #F00;
+	text-decoration: none;
+}
+#left p img {
+	float: left;
+	height: auto;
+	width: auto;
+	padding-top: 0px;
+	padding-right: 5px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	}
+#frame_link {
+	font-size: 13px;
+	padding: 0px;
+	height: auto;
+	width: auto;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	display: block;
+	line-height: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #666;
+}
+#frame_link a {
+	text-decoration: none;
+}
+#frame_link a:hover {
+	text-decoration: underline;
+}

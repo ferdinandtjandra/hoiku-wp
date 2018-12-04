@@ -1,0 +1,190 @@
+*{
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-o-box-sizing: border-box;
+-ms-box-sizing: border-box;
+margin:0px;
+padding:0px;
+}
+
+.hoikushi_part_wrapper{
+	width: 100%;
+	background-image: url(../images/bg.png);
+}
+
+.hoikushi_part_header{
+	width: 100%;
+
+}
+
+.hoikushi_part_topimg{
+	width: 100vw;
+	height: 100vh;
+	background-image: url(../images/topimg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat!important;
+	position: relative;
+	position: fixed;
+    background-color: #FFF;
+    z-index: -1;
+    top: 0;
+}
+
+.hoikushi_part_topimg h1{
+	width: 100%;
+	font-size: 50px;
+	letter-spacing: 0.1;
+	position: absolute;
+	top:38%;
+	left:3%;
+	opacity: 0.6;
+	line-height: 1.5em;
+
+
+}
+
+.hoikushi_part_container{
+	width: 100%;
+	padding:5px 5%;
+	margin-top: 700px;
+	background: #FFF;
+
+
+}
+
+.hoikushi_part_article{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.hoikushi_part_article_tabel{
+	width: 32%;
+	margin:20px 0.5%;
+	padding: 15px;
+    background-color: #FFF0F5;
+    border-radius: 25px;
+}
+
+.hoikushi_part_article_tabel:hover{
+	background-color: #FFC0CB;
+}
+
+
+.hoikushi_part_article_tabel img{
+	width: 100%;
+	border-radius: 25px;
+}
+
+.hoikushi_part_article_tabel h2{
+	font-size: 16px;
+	margin:10px 0;
+	text-indent: 4px;
+	font-weight: normal;
+	letter-spacing: 0.1em;
+	line-height: 1.5;
+	border-left: 20px solid #F08080;
+
+
+}
+
+.hoikushi_part_article_tabel p{
+	font-size: 14px;
+	line-height: 1.5;
+	font-family: "Rounded Mplus 1c","游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Verdana, sans-serif;
+
+}
+
+.hoikushi_part_article_tabel a{
+	text-decoration: none;
+}
+.hoikushi_part_other_tabel:hover{
+	background-color: #FFC0CB;
+}
+
+
+
+.hoikushi_part_other{
+	width: 50%;
+}
+
+.hoikushi_part_other_wrap{
+	display: flex;
+
+}
+
+.hoikushi_part_other_tabel{
+	padding: 25px;
+    background-color: #FFF0F5;
+    border-radius: 25px;
+    margin: 30px 0;
+
+
+}
+
+.hoikushi_part_title h2{
+	text-align: center;
+	font-size: 25px;
+	letter-spacing: 0.1em;
+	margin-top: 70px;
+	margin-bottom: 40px;
+	margin-left: 10%;
+	margin-right: 10%;
+    border-bottom: dotted 10px #F08080;
+    font-weight: normal;
+
+}
+
+
+.hoikushi_part_other_tabel h2{
+	border-left: 15px solid #F08080;
+	text-indent: 10px;
+}
+
+.hoikushi_part_other_tabel p{
+	padding:10px 0;
+	font-size: 14px;
+	line-height: 1.5;
+
+}
+
+a{
+	text-decoration: none;
+}
+
+.hoikushi_part_footer{
+	width: 100%;
+	background-color: #F08080;
+	padding:10px 0;
+	text-align: center;
+}
+
+@media screen and (max-width:480px) {
+
+    .hoikushi_part_topimg{
+	width: 100vw;
+	height: 37vh;
+}
+
+
+    .hoikushi_part_topimg h1{
+    	font-size: 25px;
+    }
+
+    .hoikushi_part_container{
+    	margin-top: 247px;
+    	padding-top:2px;
+    }
+
+	.hoikushi_part_article{
+		display: block;
+	}
+
+	.hoikushi_part_article_tabel{
+		width: 100%;
+		margin-bottom: 50px;
+	}
+
+
+}
+
