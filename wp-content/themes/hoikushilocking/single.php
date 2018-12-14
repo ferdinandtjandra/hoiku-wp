@@ -17,8 +17,7 @@
 
       <h2><?php the_title(); ?></h2>
       <p>
-      <img src="<?php echo get_template_directory_uri(); ?>/images/thumb2.png" class="youchienkyouyu_kyuzin_thumb01" />
-      <?php the_content(); ?>
+        <?php the_content(); ?>
 
   <?php endwhile; else : ?>
         <article>
@@ -26,18 +25,9 @@
         </article>
   <?php endif;  wp_reset_query();?>
 
-
-
-<h2>保育士の求人情報とはどこで探すのか</h2>
-<p>
-<img src="images/thumb2.png" class="youchienkyouyu_kyuzin_thumb01" />
-保育士（※詳しい情報は、<a href="#">全国保育士養成協議会の公式サイト「保育士試験とは」</a>をご参照ください。）の求人情報とは基本的にどこで探すものなのか、よく考えてから動くようにしましょう。闇雲に探してもなかなか見つからない時があるので、そうならないように注意が必要です。今の時代なら、ネットから探すのが1番簡単でしょう。<br/ ><br/ >インターネット上から保育士の求人募集情報を探すことができる今の時代は、本当に便利になったと言えます。有効求人倍率が単純に高い状態も続いているので、すぐにでも新しい求人情報を探すことができるようになるでしょう。<br/ ><br/ >保育士は、ただでさえいろいろなところから求められている職業だといえます。そういったことを考えるとなおのこと、これからさまざまな職場で働くチャンスが生まれてくると言えるでしょう。自分からそのチャンスを掴み取るように、情報収集を忘れずに行うようにしてください。</p>
-
-
 <div class="youchienkyouyu_kyuzin_tsuiki">
 	<h2>ここから追記</h2>
 <p>
-<img src="images/thumb2.png" class="youchienkyouyu_kyuzin_thumb01" />
 <?php the_field('information'); ?>
 
 </div><!--tsuiki-->
@@ -47,104 +37,101 @@
 <div class="youchienkyouyu_kyuzin_leftside">
 <h3>おすすめ外部リンク</h3>
 <ul>
-<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
-	<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li><li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
-<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
+	<?php
+	// GET RECOMMENDATION POST
+	query_posts( array( 'post_type' =>array('post','postSecond'),'cat'=> 3,'posts_per_page' => 3)); ?>
+	<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+
+		<li class="youchienkyouyu_kyuzin_sub">
+			<a href="<?php the_permalink(); ?>">
+			<div class="youchienkyouyu_kyuzin_gazou">
+			</div><!--gazou-->
+			<h4><?php the_title(); ?></h4>
+			<p><?php the_excerpt(); ?></p>
+		    </a>
+		</li>
+
+
+
+	<?php endwhile; endif; wp_reset_query();  ?>
+
+
+
 </ul>
 <h3>関連記事</h3>
 <ul>
-<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
+	<?php
+	//GET POST SAME CATEGORY
+	$post_id = get_the_ID();
+	$categories = get_the_category( $post_id );
+
+	$args = array(
+	 'posts_per_page' => 3, // How many items to display
+	 'post__not_in'   => array( get_the_ID() ), // Exclude current post
+	 'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
+	);
+
+	$cats = wp_get_post_terms( get_the_ID(), 'category' );
+	$cats_ids = array();
+	foreach( $cats as $wpex_related_cat ) {
+	 $cats_ids[] = $wpex_related_cat->term_id;
+	}
+	if ( ! empty( $cats_ids ) ) {
+	 $args['category__in'] = $cats_ids;
+	}
+
+	// Query posts
+	$wpex_query = new wp_query( $args );
+
+	// Loop through posts
+	foreach( $wpex_query->posts as $post ) : setup_postdata( $post );
+	?>
+
 	<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
+	<a href="<?php the_permalink(); ?>">
 	<div class="youchienkyouyu_kyuzin_gazou">
 	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li><li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
-<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
+	<h4><?php the_title(); ?></h4>
+	<p><?php the_excerpt(); ?></p>
+		</a>
+	</li>
+
+
+
+	<?php
+	// End loop
+	endforeach;
+
+	// Reset post data
+	wp_reset_postdata(); ?>
+
+
 <h3>カテゴリ一覧</h3>
 <ul>
-<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
-	<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li><li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
-<li class="youchienkyouyu_kyuzin_sub">
-	<a href="#">
-	<div class="youchienkyouyu_kyuzin_gazou">
-	</div><!--gazou-->
-	<h4>外部リンクタイトル外部リンクタイトル外部リンクタイトル</h4>
-	<p>文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字外部リンク文字</p>
-    </a>
-</li>
+
+	<?php
+	 // GET CATEGORY LIST
+		$categories = get_categories(array('hide_empty' => 0,'number' => 3));
+
+		foreach($categories as $category) {
+
+			$current_term = get_queried_object();
+
+			$image = get_field('thumbnail', $category->taxonomy . '_' . $category->term_id );
+			?>
+			<li class="youchienkyouyu_kyuzin_sub">
+				<a href="#">
+				<div class="youchienkyouyu_kyuzin_gazou">
+				</div><!--gazou-->
+				<h4><?php echo $category->name; ?></h4>
+				<p><?php echo $category->description; ?></p>
+			    </a>
+			</li> 
+			<?php
+		}
+		wp_reset_query();
+	 ?>
+
 </ul>
 
 

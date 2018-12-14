@@ -15,6 +15,7 @@
       <?php
       $args = [
           'posts_per_page' => 3,
+          'post_type' => array( 'postsecond', 'post')
       ];
       $loop = new WP_Query($args);
 
@@ -57,7 +58,7 @@
 		   <h2>カテゴリー</h2>
 
 
-       <?php if (query_posts('cat=4')) : ?>
+       <?php if (query_posts('cat>=1')) : ?>
          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
              <div class="hoikushi_tokyo_blog-container">
                <a href="<?php the_permalink() ?>">

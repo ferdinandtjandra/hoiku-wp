@@ -19,6 +19,7 @@
         <?php
         $args = [
             'posts_per_page' => 6,
+	          'post_type' => array( 'postsecond', 'post')
         ];
         $loop = new WP_Query($args);
 
@@ -54,26 +55,29 @@
 
 			<div class="hoikushi_part_article">
 
-        <?php if (query_posts('cat=2')) : ?>
-          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+				<?php
+				 // GET CATEGORY LIST
+					$categories = get_categories(array('hide_empty' => 0,'number' => 3));
 
-            <div class="hoikushi_part_article_tabel">
-      				<a href="<?php the_permalink() ?>">
+					foreach($categories as $category) {
+
+						$current_term = get_queried_object();
+
+						$image = get_field('thumbnail', $category->taxonomy . '_' . $category->term_id );
+						?>
+						<div class="hoikushi_part_article_tabel">
+      				<a href="#">
       				<div class="hoikushi_part_article_img">
-                <?php
-                  $image = get_field('thumbnail');
-                  if( !empty($image) ): ?>
-                    <img src="<?php echo $image['url']; ?>" />
-                  <?php endif; ?>
+						 <img src="<?php echo $image['url']; ?>">
       				</div>
-      					<h2><?php the_title();?></h2>
-      					<p><?php the_excerpt(); ?></p>
+      					<h2><?php echo $category->name; ?></h2>
+      					<p><?php echo $category->description; ?></p>
       				</a>
       			</div><!--article_tabel-->
-          <?php endwhile; ?>
-        <?php else : ?>
-          <h3>There is no posts</h3>
-        <?php endif; wp_reset_query();?>
+						<?php
+					}
+					wp_reset_query();
+				 ?>
 
 
 
@@ -87,18 +91,8 @@
 
 			<div class="hoikushi_part_article">
 
-			<div class="hoikushi_part_article_tabel">
-				<a href="#">
-				<div class="hoikushi_part_article_img">
-					<img src="images/article_img.jpg">
-				</div>
-					<h2>記事タイトル</h2>
-					<p>記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト記事テキスト</p>
-				</a>
-			</div><!--article_tabel-->
 
-
-      <?php query_posts( array( 'post_type' =>array('post','postSecond'))); ?>
+      <?php query_posts( array( 'post_type' =>array('post','postSecond'),'cat'=> 3,'posts_per_page' => 3)); ?>
       <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
         <div class="hoikushi_part_article_tabel">
@@ -119,7 +113,7 @@
 
 
 
-			 
+
 		</div><!--article-->
 
 

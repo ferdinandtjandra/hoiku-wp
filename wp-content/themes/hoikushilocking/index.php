@@ -14,7 +14,7 @@
 
         <?php
         $args = [
-            'posts_per_page' => 6,
+            'posts_per_page' => 4,
         ];
         $loop = new WP_Query($args);
 
@@ -40,7 +40,7 @@
           <?php endwhile; ?>
         <?php else : ?>
             <h3>There is no posts</h3>
-        <?php endif; ?>
+        <?php endif; wp_reset_query(); ?>
 
 			</div>
 
@@ -48,11 +48,13 @@
 		<div class="youchienkyouyu_kyuzin_blog">
 			<h2>おすすめ外部リンク</h2>
 			<div class="youchienkyouyu_kyuzin_blog-flex">
-        <?php if (query_posts('cat=2')) : ?>
-          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
 
+				<?php
+				// GET RECOMMENDATION POST
+				query_posts( array( 'post_type' =>array('post','postSecond'),'cat'=> 3,'posts_per_page' => 4)); ?>
+				<?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
-    			<div class="youchienkyouyu_kyuzin_blog-container">
+					<div class="youchienkyouyu_kyuzin_blog-container">
             <a href="<?php the_permalink() ?>">
     				<div class="youchienkyouyu_kyuzin_blog-container-img">
               <?php
@@ -67,10 +69,8 @@
             </div><!--blog-container-->
 
 
-          <?php endwhile; ?>
-        <?php else : ?>
-          <h3>There is no posts</h3>
-        <?php endif; wp_reset_query();?>
+
+				<?php endwhile; endif; wp_reset_query();  ?>
 
 
 			</div><!--blog-flex-->
@@ -80,31 +80,38 @@
 			<h2>カテゴリ</h2>
 			<div class="youchienkyouyu_kyuzin_blog-flex">
 
-        <?php query_posts( array( 'post_type' =>array('post','postSecond'))); ?>
-        <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
+				<?php
+				 // GET CATEGORY LIST
+					$categories = get_categories(array('hide_empty' => 0,'number' => 4));
 
-          <div class="youchienkyouyu_kyuzin_blog-container">
-            <a href="<?php the_permalink(); ?>">
-            <div class="youchienkyouyu_kyuzin_blog-container-img">
-              <?php
-                    $image = get_field('thumbnail');
-                    if( !empty($image) ):
-              ?>
-                    <img src="<?php echo $image['url']; ?>">
-              <?php endif; ?>
-            </div>
-            <h3><?php the_title(); ?></h3>
-              <p><?php the_excerpt(); ?></p>
-            </a>
-            </div><!--blog-container-->
+					foreach($categories as $category) {
 
+						$current_term = get_queried_object();
 
-        <?php endwhile; endif; wp_reset_query();  ?>
-
+						$image = get_field('thumbnail', $category->taxonomy . '_' . $category->term_id );
+						?>
+						<div class="youchienkyouyu_kyuzin_blog-container">
+							<a href="#">
+							<div class="youchienkyouyu_kyuzin_blog-container-img">
+								<img src="<?php echo $image['url']; ?>">
+							</div>
+							<h3><?php echo $category->name; ?></h3>
+								<p><?php echo $category->description; ?></p>
+							</a>
+							</div><!--blog-container-->
 
 
+						<?php
+					}
+					wp_reset_query();
+				 ?>
 
- 
+
+
+
+
+
+
 			</div><!--blog-flex-->
 		</div><!--blog-->
 	</div><!--container-->

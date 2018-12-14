@@ -22,7 +22,7 @@
 
           <?php
           $args = [
-              'posts_per_page' => 6,
+              'posts_per_page' => 6
           ];
           $loop = new WP_Query($args);
 
@@ -47,7 +47,8 @@
             <?php endwhile; ?>
           <?php else : ?>
               <h3>There is no posts</h3>
-          <?php endif; ?>
+          <?php endif;
+          wp_reset_query();?>
 
 			</div><!--tabel_wrap-->
 		</div><!--contains-->
@@ -57,25 +58,31 @@
 			<h2>▼カテゴリ一覧</h2>
 			<div class="hoikushi_tensyoku_matome_tabel_flex">
 
-        <?php if (query_posts('cat=2')) : ?>
-          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
-              <div class="hoikushi_tensyoku_matome_tabel">
-                <a href="<?php the_permalink() ?>">
-                <div class="hoikushi_tensyoku_matome_tabel_img">
-                      <?php
-                        $image = get_field('thumbnail');
-                        if( !empty($image) ): ?>
-                          <img src="<?php echo $image['url']; ?>" />
-                        <?php endif; ?>
-                      </div><!--tabel_img-->
-                <h3><?php the_title();?></h3>
-                <p><?php the_excerpt(); ?></p>
-                </a>
-              </div><!--tabel-->
-          <?php endwhile; ?>
-        <?php else : ?>
-          <h3>There is no posts</h3>
-        <?php endif; wp_reset_query();?>
+        <?php
+          $categories = get_categories(array('hide_empty' => 0,'number' => 3));
+
+          foreach($categories as $category) {
+
+            $current_term = get_queried_object();
+
+            $image = get_field('thumbnail', $category->taxonomy . '_' . $category->term_id );
+            ?>
+
+            <div class="hoikushi_tensyoku_matome_tabel">
+              <a href="#">
+              <div class="hoikushi_tensyoku_matome_tabel_img">
+                    <img src="<?php echo $image['url']; ?>">
+                    </div><!--tabel_img-->
+              <h3><?php echo $category->name; ?></h3>
+              <p><?php the_excerpt(); ?></p>
+              </a>
+            </div><!--tabel-->
+
+            <?php
+          }
+          wp_reset_query();
+         ?>
+
 
 
 			</div><!--tabel_wrap-->
@@ -87,7 +94,7 @@
 			<h2>▼外部リンク一覧</h2>
 			<div class="hoikushi_tensyoku_matome_tabel_flex">
 
-        <?php query_posts( array( 'post_type' =>array('post','postSecond'))); ?>
+        <?php query_posts( array( 'post_type' =>array('postSecond'))); ?>
         <?php if (have_posts()) : while(have_posts()) : the_post(); ?>
 
           <div class="hoikushi_tensyoku_matome_tabel">

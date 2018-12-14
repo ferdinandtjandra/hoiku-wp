@@ -54,7 +54,7 @@ body {
 .hoikushi_tokyo_header h1{
 	width: 60%;
 	text-align: left;
-	
+
 	letter-spacing: 0.1em;
 	font-weight: normal;
 	font-family: Futura, "Trebuchet MS", Arial, sans-serif !important;
@@ -114,8 +114,7 @@ body {
 
 .hoikushi_tokyo_article_img{
 	width: 100vw;
-	height: 100vh;
-	background-image: url(../images/top.jpg);
+	height: 100vh; 
 	background-size: cover;
 	background-repeat:repeat;
 	background-position: center;
@@ -198,7 +197,7 @@ body {
 .hoikushi_tokyo_category_aria{
 	width: 32%;
 	padding:25px 0;
-	
+
 }
 
 .hoikushi_tokyo_category_aria a{
@@ -306,7 +305,7 @@ table,td,tr {
 		margin-bottom: 50px;
 		font-size: 14px;
 	}
-	
+
 	.hoikushi_tokyo_article_img{
 		height: 0;
 	}
