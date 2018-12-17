@@ -13,13 +13,49 @@
 
 
       <?php
+      if ( is_category() ) {
+
+        $category = end(get_the_category());
+        $category_id = $category->cat_ID;
+        $args = [
+            'posts_per_page' => 3,
+            'post_type' => array( 'postsecond', 'post'),
+            'cat' =>$category_id
+        ];
+        $loop = new WP_Query($args);
+
+        if ($loop->have_posts()) : ?>
+          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+            <div class="hoikushi_tokyo_blog-container">
+              <a href="<?php the_permalink(); ?>">
+              <div class="hoikushi_tokyo_blog-container-img">
+
+              <?php
+                    $image = get_field('thumbnail');
+                    if( !empty($image) ):
+              ?>
+                      <img src="<?php echo $image['url']; ?>" />
+              <?php endif; ?>
+
+              </div>
+              <div class="hoikushi_tokyo_blog-container-unity">
+                <h3><?php the_title(); ?></h3>
+                <p><?php the_excerpt(); ?></p>
+              </a>
+              </div><!--blog-container-unity-->
+            </div><!--blog-container-->
+          <?php endwhile; ?>
+        <?php else : ?>
+          <h3>There is no posts</h3>
+        <?php endif; wp_reset_query();
+
+    }else{
       $args = [
           'posts_per_page' => 3,
           'post_type' => array( 'postsecond', 'post')
       ];
       $loop = new WP_Query($args);
-
-        if (have_posts()) : ?>
+        if ($loop->have_posts()) : ?>
           <?php while ($loop->have_posts()) : $loop->the_post();  ?>
 
             <div class="hoikushi_tokyo_blog-container">
@@ -44,7 +80,15 @@
           <?php endwhile; ?>
       <?php else : ?>
             <h3>There is no posts</h3>
-      <?php endif; ?>
+      <?php endif; wp_reset_query();
+    }
+    ?>
+
+
+
+
+
+
 
 
 
@@ -58,7 +102,14 @@
 		   <h2>カテゴリー</h2>
 
 
-       <?php if (query_posts('cat>=1')) : ?>
+       <?php
+
+         $args = [
+             'posts_per_page' => 3,
+             'post_type' => array( 'postsecond', 'post')
+         ];
+         $loop = new WP_Query($args);
+       if (query_posts('cat>=1')) : ?>
          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
              <div class="hoikushi_tokyo_blog-container">
                <a href="<?php the_permalink() ?>">

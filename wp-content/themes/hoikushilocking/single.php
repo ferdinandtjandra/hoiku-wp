@@ -120,13 +120,13 @@
 			$image = get_field('thumbnail', $category->taxonomy . '_' . $category->term_id );
 			?>
 			<li class="youchienkyouyu_kyuzin_sub">
-				<a href="#">
+				<a href="<?php echo "/category/".$category->slug  ?>">
 				<div class="youchienkyouyu_kyuzin_gazou">
 				</div><!--gazou-->
 				<h4><?php echo $category->name; ?></h4>
 				<p><?php echo $category->description; ?></p>
 			    </a>
-			</li> 
+			</li>
 			<?php
 		}
 		wp_reset_query();

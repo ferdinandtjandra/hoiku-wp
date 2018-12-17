@@ -129,7 +129,7 @@
 						$image = get_field('thumbnail', $category->taxonomy . '_' . $category->term_id );
 						?>
 						<div class="hoikushi_tensyoku_matome_tabel">
-							<a href="#">
+							<a href="<?php echo "/category/".$category->slug  ?>">
 							<div class="hoikushi_tensyoku_matome_tabel_img">
 										<img src="<?php echo $image['url']; ?>">
 										</div><!--tabel_img-->
@@ -182,7 +182,7 @@
 
 
 
-         
+
 
 			</div><!--tabel_wrap-->
 		</div><!--contains-->

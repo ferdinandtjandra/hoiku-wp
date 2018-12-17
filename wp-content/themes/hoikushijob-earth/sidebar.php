@@ -61,7 +61,7 @@
 			?>
 
 			<li class="hoikushi_part_sidebar">
-				<a href="#"><?php echo $category->name; ?></a>
+				<a href="<?php echo "/category/".$category->slug  ?>"><?php echo $category->name; ?></a>
 			</li>
 
 			<?php

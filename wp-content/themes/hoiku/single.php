@@ -45,15 +45,14 @@
 
 								 foreach($categories as $category) {
 
-									 $current_term = get_queried_object();
 
 									 $image = get_field('thumbnail', $category->taxonomy . '_' . $category->term_id );
 									 ?>
 									 <div class="hoikushi_tokyo_category_aria">
 										 <ul>
 									 <li>
-										<a href="#">
-											<h3><?php echo $category->name; ?></h3>
+										<a href="<?php echo "/category/".$category->slug  ?>">
+											<h3><?php echo $category->name; ?> </h3>
 											 <div class="hoikushi_tokyo_category_img">
 											<img src="<?php echo $image['url']; ?>">
 											 </div><!--category_img-->

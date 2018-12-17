@@ -52,7 +52,7 @@
 									 <div class="hoikushi_tokyo_category_aria">
 										 <ul>
 									 <li>
-										<a href="#">
+										<a href="<?php echo "/category/".$category->slug  ?>">
 											<h3><?php echo $category->name; ?></h3>
 											 <div class="hoikushi_tokyo_category_img">
 											<img src="<?php echo $image['url']; ?>">

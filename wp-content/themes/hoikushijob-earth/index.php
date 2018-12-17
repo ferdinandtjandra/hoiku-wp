@@ -16,7 +16,40 @@
 
 			<div class="hoikushi_part_article">
 
-        <?php
+				<?php
+	      if ( is_category() ) {
+
+	        $category = end(get_the_category());
+	        $category_id = $category->cat_ID;
+	        $args = [
+	            'posts_per_page' => 3,
+	            'post_type' => array( 'postsecond', 'post'),
+	            'cat' =>$category_id
+	        ];
+	        $loop = new WP_Query($args);
+
+	        if ($loop->have_posts()) : ?>
+	          <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+							<div class="hoikushi_part_article_tabel">
+	      				<a href="<?php the_permalink(); ?>">
+	      				<div class="hoikushi_part_article_img">
+	                <?php
+	                      $image = get_field('thumbnail');
+	                      if( !empty($image) ):
+	                ?>
+	                      <img src="<?php echo $image['url']; ?>">
+	                <?php endif; ?>
+	      				</div>
+	      					<h2><?php the_title(); ?></h2>
+	      					<p><?php the_excerpt(); ?></p>
+	      				</a>
+	      			</div><!--article_tabel-->
+	          <?php endwhile; ?>
+	        <?php else : ?>
+	          <h3>There is no posts</h3>
+	        <?php endif; wp_reset_query();
+
+	    }else{
         $args = [
             'posts_per_page' => 6,
 	          'post_type' => array( 'postsecond', 'post')
@@ -44,7 +77,9 @@
           <?php endwhile; ?>
         <?php else : ?>
             <h3>There is no posts</h3>
-        <?php endif; ?>
+        <?php endif;  wp_reset_query();
+	    }
+			?>
 
 
 		</div><!--article-->
@@ -66,7 +101,7 @@
 						$image = get_field('thumbnail', $category->taxonomy . '_' . $category->term_id );
 						?>
 						<div class="hoikushi_part_article_tabel">
-      				<a href="#">
+      				<a href="<?php echo "/category/".$category->slug  ?>">
       				<div class="hoikushi_part_article_img">
 						 <img src="<?php echo $image['url']; ?>">
       				</div>

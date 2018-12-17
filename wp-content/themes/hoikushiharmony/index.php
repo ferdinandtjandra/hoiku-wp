@@ -19,14 +19,47 @@
 		<div class="hoikushi_tensyoku_matome_contents">
 			<h2>▼記事一覧</h2>
 			<div class="hoikushi_tensyoku_matome_tabel_flex">
+  <?php
+        if ( is_category() ) {
 
-          <?php
+          $category = end(get_the_category());
+          $category_id = $category->cat_ID;
+          $args = [
+              'posts_per_page' => 6,
+              'post_type' => array( 'postsecond', 'post'),
+              'cat' =>$category_id
+          ];
+          $loop = new WP_Query($args);
+
+          if ($loop->have_posts()) : ?>
+            <?php while ($loop->have_posts()) : $loop->the_post(); ?>
+              <div class="hoikushi_tensyoku_matome_tabel">
+                 <a href="<?php the_permalink(); ?>">
+                <div class="hoikushi_tensyoku_matome_tabel_img">
+                    <?php
+                          $image = get_field('thumbnail');
+                          if( !empty($image) ):
+                    ?>
+                          <img src="<?php echo $image['url']; ?>">
+                    <?php endif; ?>
+                  </div><!--tabel_img-->
+                <h3><?php the_title(); ?></h3>
+                <p><?php the_excerpt(); ?></p>
+              </a>
+              </div><!--tabel-->
+            <?php endwhile; ?>
+          <?php else : ?>
+            <h3>There is no posts</h3>
+          <?php endif; wp_reset_query();
+
+      }else{
+
           $args = [
               'posts_per_page' => 6
           ];
           $loop = new WP_Query($args);
 
-          if (have_posts()) : ?>
+          if ($loop->have_posts()) : ?>
             <?php while ($loop->have_posts()) : $loop->the_post();  ?>
 
 
@@ -48,6 +81,7 @@
           <?php else : ?>
               <h3>There is no posts</h3>
           <?php endif;
+        }
           wp_reset_query();?>
 
 			</div><!--tabel_wrap-->
